@@ -1,81 +1,78 @@
-body{
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin:0;
-  padding:20px;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header{
-  text-align: center;
+/* Corpo */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
   padding: 20px;
 }
 
-.avatar{
-  width:150px;
-  height:150px;
-  border-radius:50%;
-  margin-bottom:10px;
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-h1{margin-bottom:5px;}
-p{margin-bottom:15px;}
-
-.buttons a{
-  text-decoration:none;
-  padding:8px 15px;
-  margin:5px;
-  border-radius:20px;
-  display:inline-block;
-  font-weight:bold;
-  color:#fff;
-  background:#7c3aed;
+header h1 {
+  font-size: 2.5rem;
+  color: #004aad;
 }
 
-.btn-outline{
-  background:transparent;
-  border:2px solid #7c3aed;
+header p {
+  font-size: 1.2rem;
+  color: #555;
 }
 
-section{
-  background:#fff;
-  padding:20px;
-  margin:20px auto;
-  max-width:800px;
-  border-radius:10px;
+/* Seções */
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.card-container{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
+section h2 {
+  margin-bottom: 15px;
+  color: #004aad;
 }
 
-.card{
-  background:#f9f9f9;
-  padding:15px;
-  border-radius:8px;
-  flex:1;
-  min-width:250px;
-  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+/* Lista de habilidades */
+#habilidades ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-footer{
-  text-align:center;
-  margin-top:20px;
-  font-size:0.9rem;
-  color:#555;
+#habilidades li {
+  background: #eef4ff;
+  padding: 10px;
+  margin: 8px 0;
+  border-left: 5px solid #004aad;
+  border-radius: 4px;
 }
 
-/* Botão voltar ao topo */
-#back-to-top{
-  display:none;
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#7c3aed;
-  color:#fff;
-  padding:10px 14px;
-  border-radius:50%;
-  text-align:center;
-  text-decoration:none;
+/* Links */
+a {
+  color: #004aad;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #666;
 }
