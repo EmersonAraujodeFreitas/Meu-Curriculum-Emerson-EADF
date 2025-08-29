@@ -3,18 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emerson Araújo - Apresentação</title>
+  <title>Emerson Araújo - Portfólio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <!-- Cabeçalho -->
   <header>
-    <h1>Emerson Araújo</h1>
-    <p>Focado em experiência do cliente, comunicações e inovação em processos</p>
+    <div class="header-container">
+      <img src="foto.jpg" alt="Foto de Emerson Araújo" class="avatar">
+      <div class="header-text">
+        <h1>Emerson Araújo</h1>
+        <p>Experiência do Cliente | Comunicações | Inovação em Processos</p>
+        <div class="buttons">
+          <a href="mailto:seuemail@exemplo.com" class="btn">Contato</a>
+          <a href="https://br.linkedin.com/in/emerson-araújo-974046214" target="_blank" class="btn btn-outline">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://github.com/seu-usuario" target="_blank" class="btn btn-outline">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <!-- Seção Sobre -->
-  <section id="sobre">
+  <section id="sobre" class="scroll-animate">
     <h2>Sobre mim</h2>
     <p>
       Sou Emerson Araújo, atuo diretamente com foco na experiência do cliente em plataformas de comunicações,
@@ -24,7 +39,7 @@
   </section>
 
   <!-- Seção Habilidades & Experiências -->
-  <section id="habilidades">
+  <section id="habilidades" class="scroll-animate">
     <h2>Habilidades & Experiências</h2>
     <ul>
       <li>✔ Experiência do Cliente – otimização de jornadas e satisfação</li>
@@ -37,7 +52,7 @@
   </section>
 
   <!-- Seção Projetos -->
-  <section id="projetos">
+  <section id="projetos" class="scroll-animate">
     <h2>Projetos</h2>
     <div class="card-container">
       <div class="card">
@@ -51,27 +66,21 @@
     </div>
   </section>
 
-  <!-- Seção Contato -->
-  <section id="contato">
-    <h2>Contato</h2>
-    <ul>
-      <li><strong>Email:</strong> seuemail@exemplo.com</li>
-      <li><strong>LinkedIn:</strong> 
-        <a href="https://br.linkedin.com/in/emerson-araújo-974046214" target="_blank">
-          linkedin.com/in/emerson-araújo
-        </a>
-      </li>
-      <li><strong>GitHub:</strong> 
-        <a href="https://github.com/seu-usuario" target="_blank">
-          github.com/seu-usuario
-        </a>
-      </li>
-    </ul>
-  </section>
-
   <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Emerson Araújo. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Scroll suave -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
