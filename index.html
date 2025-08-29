@@ -10,57 +10,51 @@
 <body>
   <!-- Cabeçalho -->
   <header>
-    <div class="header-container scroll-animate">
-      <img src="https://i.ibb.co/sdv2pkYp/Gemini-Generated-Image-9csoli9csoli9cso.png" 
-           alt="Foto de Emerson Araújo" class="avatar">
-      <div class="header-text">
-        <h1>Emerson Araújo</h1>
-        <p>Experiência do Cliente | Comunicações | Inovação em Processos</p>
-        <div class="buttons">
-          <a href="mailto:seuemail@exemplo.com" class="btn">Contato</a>
-          <a href="https://br.linkedin.com/in/emerson-araújo-974046214" target="_blank" class="btn btn-outline">
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-          <a href="https://github.com/seu-usuario" target="_blank" class="btn btn-outline">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-        </div>
-      </div>
+    <img src="https://i.ibb.co/sdv2pkYp/Gemini-Generated-Image-9csoli9csoli9cso.png" alt="Emerson Araújo" class="avatar">
+    <h1>Emerson Araújo</h1>
+    <p>Experiência do Cliente | Comunicações | Inovação em Processos</p>
+    <div class="buttons">
+      <a href="mailto:seuemail@exemplo.com" class="btn">Contato</a>
+      <a href="https://br.linkedin.com/in/emerson-araújo-974046214" target="_blank" class="btn btn-outline">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/seu-usuario" target="_blank" class="btn btn-outline">
+        <i class="fab fa-github"></i> GitHub
+      </a>
     </div>
   </header>
 
-  <!-- Seção Sobre -->
-  <section id="sobre" class="scroll-animate">
+  <!-- Sobre -->
+  <section id="sobre">
     <h2>Sobre mim</h2>
     <p>
       Sou Emerson Araújo, atuo diretamente com foco na experiência do cliente em plataformas de comunicações,
       aplicando melhoria contínua e inovação em processos e projetos do ramo de call center e outros setores.
-      Minha missão é transformar interações em experiências positivas.
     </p>
   </section>
 
-  <!-- Seção Habilidades -->
-  <section id="habilidades" class="scroll-animate">
+  <!-- Habilidades -->
+  <section id="habilidades">
     <h2>Habilidades & Experiências</h2>
     <ul>
-      <li class="scroll-animate">✔ Experiência do Cliente</li>
-      <li class="scroll-animate">✔ Plataformas de Comunicação</li>
-      <li class="scroll-animate">✔ Call Center</li>
-      <li class="scroll-animate">✔ Melhoria Contínua</li>
-      <li class="scroll-animate">✔ Inovação em Processos</li>
-      <li class="scroll-animate">✔ Projetos Multidisciplinares</li>
+      <li>✔ Experiência do Cliente</li>
+      <li>✔ Plataformas de Comunicação</li>
+      <li>✔ Call Center</li>
+      <li>✔ Melhoria Contínua</li>
+      <li>✔ Inovação em Processos</li>
+      <li>✔ Projetos Multidisciplinares</li>
     </ul>
   </section>
 
-  <!-- Seção Projetos -->
-  <section id="projetos" class="scroll-animate">
+  <!-- Projetos -->
+  <section id="projetos">
     <h2>Projetos</h2>
     <div class="card-container">
-      <div class="card scroll-animate">
+      <div class="card">
         <h3>Projeto de Inovação em Call Center</h3>
         <p>Reduziu 25% do tempo médio de chamadas e aumentou a satisfação do cliente.</p>
       </div>
-      <div class="card scroll-animate">
+      <div class="card">
         <h3>Gestão de Processos Multicanal</h3>
         <p>Coordenação de projetos de comunicação e atendimento multicanal.</p>
       </div>
@@ -68,31 +62,18 @@
   </section>
 
   <!-- Rodapé -->
-  <footer class="scroll-animate">
+  <footer>
     <p>&copy; 2025 Emerson Araújo. Todos os direitos reservados.</p>
   </footer>
 
   <!-- Botão voltar ao topo -->
   <a href="#" id="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
-  <!-- Script -->
   <script>
-    // Scroll animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.2 });
-
-    document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
-
-    // Botão voltar ao topo
     const backToTop = document.getElementById('back-to-top');
     window.addEventListener('scroll', () => {
-      if(window.scrollY > 300) backToTop.classList.add('show');
-      else backToTop.classList.remove('show');
+      if(window.scrollY > 300) backToTop.style.display = 'block';
+      else backToTop.style.display = 'none';
     });
   </script>
 </body>
