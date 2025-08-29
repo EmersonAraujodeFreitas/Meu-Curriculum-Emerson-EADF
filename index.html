@@ -3,28 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emerson Araújo - Portfólio Premium</title>
+  <title>Emerson Araújo - Portfólio</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Fundo animado com partículas -->
-  <canvas id="particles"></canvas>
-
   <!-- Cabeçalho -->
   <header>
     <div class="header-container scroll-animate">
       <img src="https://i.ibb.co/sdv2pkYp/Gemini-Generated-Image-9csoli9csoli9cso.png" 
-           alt="Foto de Emerson Araújo" class="avatar" title="Emerson Araújo">
+           alt="Foto de Emerson Araújo" class="avatar">
       <div class="header-text">
         <h1>Emerson Araújo</h1>
         <p>Experiência do Cliente | Comunicações | Inovação em Processos</p>
         <div class="buttons">
-          <a href="mailto:seuemail@exemplo.com" class="btn" title="Enviar e-mail">Contato</a>
-          <a href="https://br.linkedin.com/in/emerson-araújo-974046214" target="_blank" class="btn btn-outline" title="Visitar LinkedIn">
+          <a href="mailto:seuemail@exemplo.com" class="btn">Contato</a>
+          <a href="https://br.linkedin.com/in/emerson-araújo-974046214" target="_blank" class="btn btn-outline">
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
-          <a href="https://github.com/seu-usuario" target="_blank" class="btn btn-outline" title="Visitar GitHub">
+          <a href="https://github.com/seu-usuario" target="_blank" class="btn btn-outline">
             <i class="fab fa-github"></i> GitHub
           </a>
         </div>
@@ -38,20 +35,20 @@
     <p>
       Sou Emerson Araújo, atuo diretamente com foco na experiência do cliente em plataformas de comunicações,
       aplicando melhoria contínua e inovação em processos e projetos do ramo de call center e outros setores.
-      Minha missão é transformar interações em experiências positivas, gerando valor para clientes e empresas.
+      Minha missão é transformar interações em experiências positivas.
     </p>
   </section>
 
-  <!-- Seção Habilidades & Experiências -->
+  <!-- Seção Habilidades -->
   <section id="habilidades" class="scroll-animate">
     <h2>Habilidades & Experiências</h2>
     <ul>
-      <li class="scroll-animate" title="Otimização de processos de atendimento">✔ Experiência do Cliente</li>
-      <li class="scroll-animate" title="Integração e melhoria de plataformas">✔ Plataformas de Comunicação</li>
-      <li class="scroll-animate" title="Gestão de operações multicanal">✔ Call Center</li>
-      <li class="scroll-animate" title="Implementação de KPIs e métricas">✔ Melhoria Contínua</li>
-      <li class="scroll-animate" title="Criação de soluções escaláveis e ágeis">✔ Inovação em Processos</li>
-      <li class="scroll-animate" title="Coordenação de projetos estratégicos">✔ Projetos Multidisciplinares</li>
+      <li class="scroll-animate">✔ Experiência do Cliente</li>
+      <li class="scroll-animate">✔ Plataformas de Comunicação</li>
+      <li class="scroll-animate">✔ Call Center</li>
+      <li class="scroll-animate">✔ Melhoria Contínua</li>
+      <li class="scroll-animate">✔ Inovação em Processos</li>
+      <li class="scroll-animate">✔ Projetos Multidisciplinares</li>
     </ul>
   </section>
 
@@ -59,11 +56,11 @@
   <section id="projetos" class="scroll-animate">
     <h2>Projetos</h2>
     <div class="card-container">
-      <div class="card scroll-animate" title="Projeto de otimização de call center">
+      <div class="card scroll-animate">
         <h3>Projeto de Inovação em Call Center</h3>
         <p>Reduziu 25% do tempo médio de chamadas e aumentou a satisfação do cliente.</p>
       </div>
-      <div class="card scroll-animate" title="Gestão de processos multicanal">
+      <div class="card scroll-animate">
         <h3>Gestão de Processos Multicanal</h3>
         <p>Coordenação de projetos de comunicação e atendimento multicanal.</p>
       </div>
@@ -76,9 +73,9 @@
   </footer>
 
   <!-- Botão voltar ao topo -->
-  <a href="#" id="back-to-top" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></a>
+  <a href="#" id="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
-  <!-- Scripts -->
+  <!-- Script -->
   <script>
     // Scroll animations
     const observer = new IntersectionObserver((entries) => {
@@ -97,42 +94,6 @@
       if(window.scrollY > 300) backToTop.classList.add('show');
       else backToTop.classList.remove('show');
     });
-
-    // Partículas leves
-    const canvas = document.getElementById('particles');
-    const ctx = canvas.getContext('2d');
-    let particlesArray;
-    function initParticles() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      particlesArray = [];
-      for(let i=0; i<80; i++){
-        particlesArray.push({
-          x: Math.random()*canvas.width,
-          y: Math.random()*canvas.height,
-          size: Math.random()*4+1,
-          speedX: (Math.random()*1)-0.5,
-          speedY: (Math.random()*1)-0.5
-        });
-      }
-    }
-    function animateParticles() {
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      particlesArray.forEach(p=>{
-        ctx.beginPath();
-        ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
-        ctx.fillStyle='rgba(124,58,237,0.4)';
-        ctx.fill();
-        p.x += p.speedX;
-        p.y += p.speedY;
-        if(p.x<0||p.x>canvas.width) p.speedX*=-1;
-        if(p.y<0||p.y>canvas.height) p.speedY*=-1;
-      });
-      requestAnimationFrame(animateParticles);
-    }
-    window.addEventListener('resize', initParticles);
-    initParticles();
-    animateParticles();
   </script>
 </body>
 </html>
